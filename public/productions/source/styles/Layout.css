@@ -1,0 +1,84 @@
+/* classes */
+.bodyContainer {
+    border: 0px solid red;
+    height: 100vh;
+    weight: 100vw;
+
+    font-family: var(--fontTitle);
+
+    display: flex;
+    flex-direction: column;
+}
+.ribbon {
+    border-bottom: 1px solid black;
+    background-color: mistyrose;
+    height: 80px;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mainWindow {
+    border: 0px solid black;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;;
+}
+.doc {
+    background-color: lightblue;
+    border-right: 1px solid black;
+    width: 20%;
+    min-width: 125px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.doc ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mainView {
+    width: 50%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.divider {
+    background-color: lightgray;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    width: 10px;
+}
+.divider:hover {
+    cursor: ew-resize;
+}
+.detailView {
+    width: 30%;
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.statusBar {
+    background-color: gray;
+    border-top: 1px solid black;
+    height: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;;
+    align-items: center;
+}

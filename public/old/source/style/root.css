@@ -1,0 +1,10 @@
+/* @import url('./normalize.css'); */
+
+body {
+    align-items: center;
+    background-color: pink;
+    color: red;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}

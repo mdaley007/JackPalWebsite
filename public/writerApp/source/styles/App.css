@@ -1,0 +1,57 @@
+/* import fonts */
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+/* global variables */
+:root {
+    --backgroundColor: white;
+    --fontText: 'Special Elite', cursive;
+    --fontTitle: 'Oswald', sans-serif;
+}
+
+/* elements */
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* classes */
+.bodyContainer {
+    border: 0px solid black;
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    weight: 100vw;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: stretch;
+    align-items: center;
+}
+.mainWindow {
+    background-color: cornflowerblue;
+    border: 2px solid black;
+    border-bottom: none;
+    box-sizing: border-box;
+    font-family: var(--fontTitle);
+    height: 100%;
+    margin: 0px;
+    padding: 1%;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-content: space-between;
+}
+.navBar {
+    background-color: black;
+    border: 0px solid yellow;
+    box-sizing: border-box;
+    color: white;
+    font-family: var(--fontTitle);
+    height: 40px;
+    width: 100%
+}

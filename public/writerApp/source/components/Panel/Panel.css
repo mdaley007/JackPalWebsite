@@ -1,0 +1,70 @@
+/* import w3 icons */
+@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/* variables */
+:root {
+    --minPanelSize: 300px;
+    --panelBackground: whitesmoke;
+    --panelBorder: black;
+
+}
+
+/* classes */
+.panel {
+    background-color: var(--panelBackground);
+    border: 2px solid var(--panelBorder);
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-family: var(--fontTitle);
+    height: 48%;
+    margin: 1%;
+    min-height: var(--minPanelSize);
+    min-width: var(--minPanelSize);
+    padding: 0px;
+    width: 30.667%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+.title {
+    color: var(--panelBorder);
+    font-family: var(--fontTitle);
+    text-align: center;
+}
+.docContainer {
+    border: 1px solid red;
+    box-sizing: border-box;
+/*    height: 100%;*/
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: flex-start;
+}
+.document {
+    border: 1px solid yellow;
+    box-sizing: border-box;
+    font-family: var(--fontText);
+    margin: 5px;
+    margin-bottom: 0px;
+    max-width: 60px;
+    padding: 0px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.icon {
+    color: grey;
+    font-size: 40px;
+}
+.fileName {
+    font-size: 10px;
+}

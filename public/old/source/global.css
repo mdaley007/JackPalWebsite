@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+:root {
+    --backgroundColor: DodgerBlue;
+    --fontText: 'Special Elite', cursive;
+    --fontTitle: 'Oswald', sans-serif;
+    --selectionColor: red;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    display: flex;
+    font-family: var(--fontText);
+}

@@ -1,0 +1,15 @@
+/* normalize css */
+@import url(http://www.w3schools.com/lib/w3.css);
+
+/* get fonts */
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+/* global variables */
+:root {
+    --backgroundColor: white;
+    --fontText: 'Special Elite', cursive;
+    --fontTitle: 'Oswald', sans-serif;
+    --navHeight: 40px;
+    --selectionColor: red;
+}

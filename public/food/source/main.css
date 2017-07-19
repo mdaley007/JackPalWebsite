@@ -1,0 +1,53 @@
+/* normalize css */
+@import url(http://www.w3schools.com/lib/w3.css);
+/* get fonts */
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+:root {
+    --backgroundColor: white;
+    --fontText: 'Special Elite', cursive;
+    --fontTitle: 'Oswald', sans-serif;
+    --selectionColor: orange;
+}
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+
+}
+a:hover {
+    color: var(--selectionColor);
+}
+a:active {
+
+}
+body {
+    align-items: flex-start;
+    background-color: var(--backgroundColor);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+h1 {
+    font-family: var(--fontTitle);
+    text-align: center;
+}
+hr {
+    border: 1px solid grey;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+}
+p {
+    color: var(--selectionColor);
+    font-family: var(--fontText);
+    font-size: 1.5em;
+    height: 1.25em;
+    list-style-type: none;
+    text-align: center;
+}

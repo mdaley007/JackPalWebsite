@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+:root {
+    --backgroundColor: white;
+    --fontText: 'Special Elite', cursive;
+    --fontTitle: 'Oswald', sans-serif;
+}
+
+body {
+    align-items: center;
+    background-color: var(--backgroundColor);
+    display: flex;
+    font-family: var(--fontText);
+    font-size: 2em;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100vw;
+}

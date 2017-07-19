@@ -1,0 +1,15 @@
+// import modules
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+// import css
+import './main'
+
+ReactDOM.render(
+    <div>
+        <h1>Jack Pal Construction</h1>
+        <hr />
+        <p>This Page is Under Construction</p>
+    </div>,
+    document.getElementById('root')
+);

@@ -1,0 +1,21 @@
+{
+  "name": "jack-pal-server",
+  "version": "1.0.0",
+  "description": "Jack Pal Industries: Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Jack Pal Smurch",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
+    "express-redirect": "^1.2.2",
+    "method-override": "^2.3.8",
+    "morgan": "^1.8.1"
+  }
+}

@@ -1,0 +1,95 @@
+/* normalize css */
+@import url(http://www.w3schools.com/lib/w3.css);
+/* import fonts */
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+:root {
+    --backgroundColor: white;
+    --backgroundHeight: 100%;
+    --backgroundWidth: 100%;
+    --fontText: 'Special Elite', cursive;
+    --fontTitle: 'Oswald', sans-serif;
+    --menuBackground: RGBA(0, 0, 0, 0.85);
+    --menuItemHeight: 12px;
+    --navBackground: black;
+    --navHeight: 40px;
+    --navHover: #222222;
+    --navSpacing: 15px;
+    --navText: #CCCCCC;
+    --selectionColor: red;
+}
+
+/* classes */
+.right {
+  float: right;
+  right: 0px;
+}
+.selected {
+    color: var(--selectionColor);
+}
+
+/* elements */
+body {
+/*
+    background: url("/media/jackPalLogo-transparent.png") no-repeat fixed center;
+    background-color: var(--backgroundColor);
+    background-size: var(--backgroundWidth) var(--backgroundHeight);
+    font-family: var(--fontTitle);
+*/
+}
+nav {
+    background-color: var(--navBackground);
+    font-family: var(--fontText);
+    height: var(--navHeight);
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+}
+nav div {
+    color: var(--navText);
+    float: left;
+    font-size: 30px;
+    padding: 10px var(--navSpacing);
+}
+nav div.homeButton {
+  height: var(--navHeight);
+  width: var(--navHeight);
+  padding: 5px 0px 0px 12px;
+}
+nav div:hover,
+nav div ul li:hover {
+    color: var(--selectionColor);
+    cursor: pointer;
+}
+nav div ul {
+    display: none;
+    list-style: none;
+    margin-bottom: var(--menuItemHeight);
+    padding: 0px;
+}
+nav div ul:hover {
+    display: block;
+}
+nav div:hover {
+  background: var(--navHover);
+  cursor: pointer;
+}
+nav div:hover ul.dropup {
+  background: var(--menuBackground);
+  border: 2px solid var(--navText);
+  border-bottom: none;
+  border-radius: 7px 7px 0px 0px;
+  bottom: var(--navHeight);
+  color: var(--navText);
+  display: block;
+  margin: 0px 0px 0px -15px;
+  position: absolute;
+}
+nav div:hover li {
+  border-bottom: 2px solid var(--navText);
+  padding: var(--menuItemHeight) var(--navSpacing);
+}
