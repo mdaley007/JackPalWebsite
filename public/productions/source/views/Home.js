@@ -5,7 +5,7 @@ import React, { Component } from 'react'
 import Nav from '../components/Nav'
 
 // import styles
-import styles from '../styles/Home.css'
+import style from '../styles/Home.css'
 
 // import navList
 import navList from './navList.json'
@@ -14,11 +14,11 @@ import navList from './navList.json'
 class Home extends Component {
     render() {
         return (
-            <div className={styles.bodyContainer}>
+            <div className={style.window}>
 
-                <Nav navList={navList} />
+                <Nav />
 
-                <div className={styles.mainWindow}></div>
+                <div className={style.workspace}></div>
 
             </div>
         )
@@ -26,6 +26,3 @@ class Home extends Component {
 }
 
 export default Home
-
-// example load image:
-//<img src={require('../media/jackPalLogo-white.png')} width='200px' height='100px' />

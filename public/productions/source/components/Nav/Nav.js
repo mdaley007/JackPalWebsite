@@ -1,13 +1,9 @@
 // import modules
 import   PropTypes            from 'prop-types'
 import   React, { Component } from 'react'
-import { BrowserRouter as Router,
-         Link,
-         Match,
-         Route }              from 'react-router-dom'
 
 // import style
-import styles from './Nav.css'
+import style from './Nav.css'
 
 // component: Navigation
 class Nav extends React.Component {
@@ -58,12 +54,41 @@ class Nav extends React.Component {
         const right = this.props.navList.right
 
         return (
-            <Router>
-                <nav className={styles.navBar}>
-                    {this.renderNavList(left,  styles.left)}
-                    {this.renderNavList(right, styles.right)}
-                </nav>
-            </Router>
+            <nav>
+
+                <div className={style.left}>
+                    <div className={style.navItem}><a href="#"><span className="fa fa-home"></span></a></div>
+                    <div className={style.navItem}>
+                        <a href="#">Workshops</a>
+                        <div className={style.menu}>
+                            <a href="#" className={style.menuItem}>Actors</a>
+                            <a href="#" className={style.menuItem}>Writers</a>
+                            <a href="#" className={style.menuItem}>Production</a>
+                        </div>
+                    </div>
+                    <div className={style.navItem}>
+                        <a href="#">About</a>
+                        <div className={style.menu}>
+                            <a href="#" className={style.menuItem}>Mission</a>
+                            <a href="#" className={style.menuItem}>Who Are We?</a>
+                            <a href="#" className={style.menuItem}>Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={style.right}>
+                    <div className={style.navItem}><a href="#">Settings</a></div>
+                    <div className={style.navItem}>
+                        <a href="#">Enter</a>
+                        <div className={style.menu}>
+                            <a href="#" className={style.menuItem}>Sign-Up</a>
+                            <a href="#" className={style.menuItem}>Sign-In</a>
+                            <a href="#" className={style.menuItem}>Sign-Out</a>
+                        </div>
+                    </div>
+                </div>
+
+            </nav>
         )
     }
 }
@@ -88,47 +113,3 @@ Nav.defaultProps = {
 }
 
 export default Nav
-
-/*
-            <Router>
-                <nav className={styles.navBar}>
-                    <ul className={styles.left}>
-                        <li className={styles.navItem}>
-                            <Link to='/'>
-                                <i className='fa fa-home'></i>
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link to='/Workshops'>Workshops</Link>
-                            <ul className={styles.navMenu}>
-                                <li className={styles.menuItem}>
-                                    <Link to='/Workshops/Actors'>Actors</Link>
-                                </li>
-                                <li className={styles.menuItem}>
-                                    <Link to='/Workshops/Screenwriting'>Screenwriting</Link>
-                                </li>
-                                <li className={styles.menuItem}>
-                                    <Link to='/Workshops/Production'>Production</Link>
-                                </li>
-                            </ul>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link to='/About'>About</Link>
-                        </li>
-                    </ul>
-                    <ul className={styles.right}>
-                        <li className={styles.navItem}>
-                            <Link to='#'>Enter</Link>
-                            <ul className={styles.navMenu}>
-                                <li className={styles.menuItem}>
-                                    <Link to='/LogIn'>LogIn</Link>
-                                </li>
-                                <li className={styles.menuItem}>
-                                    <Link to='/SignUp'>SignUp</Link>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </Router>
-*/

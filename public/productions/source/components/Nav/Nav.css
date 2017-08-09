@@ -1,103 +1,133 @@
 /* import w3 icons */
 @import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
 
+/* get fonts */
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
 /* variables */
 :root {
-    --menuBackground: #444444;
-    --navBackground: #000000;
-    --navColor: #FFFFFF;
-    --navText: #CCCCCC;
+    --fontColor: #CCCCCC;
+    --fontSize: 1.5em;
+    --fontText: 'Special Elite', cursive;
+    --fontTitle: 'Oswald', sans-serif;
+
+    --menuItemPadding: 7px 10px;
+    --menuBackgroundColor: #444444;
+    --menuBorderRadius: 7px;
+    --menuBorderThickness: 3px;
+
+    --navBackgroundColor: #000000;
+/*    --navHeight: 50px;*/
+    --navItemPadding: 10px;
+    --navLetterSpacing: 1.0px;
+    --navPadding: 10px;
+
+    --selectionColor: red;
 }
 
 /* elements */
 a {
-    padding: 0px 10px;
+    color: var(--fontColor);
+}
+a:link {
+    color: var(--fontColor);
     text-decoration: none;
 }
-ul {
-    list-style: none;
-    padding: 0px;
-    margin: 0px;
+a:visited {
+    color: var(--fontColor);
 }
-
-/* classes */
-.navBar {
-    background-color: var(--navBackground);
-    border: 0px solid red;
-    min-height: var(--navHeight);
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-
-    color: var(--navColor);
+a:hover {
+    color: var(--selectionColor);
+    cursor: pointer;
+}
+a:active {
+    color: var(--fontColor);
+}
+span {
+    color: var(--fontColor);
+}
+span:hover {
+    color: var(--selectionColor);
+}
+nav {
+    background: var(--navBackgroundColor);
+    border: none;
+    bottom: 0px;
+    color: var(--fontColor);
     font-family: var(--fontText);
-    font-size: 1.3em;
+    font-size: var(--fontSize);
+    height: var(--navHeight);
+    padding: 0px var(--navPadding);
+    position: fixed;
+    width: 100%;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;;
-    align-items: flex-start;
+    align-items: stretch;
 }
+
+/* classes */
 .left, .right {
+    border: none;
+
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: stretch;
 }
 .navItem {
-    border: 0px solid purple;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: var(--fontColor);
+    font-family: var(--fontText);
+    letter-spacing: var(--navLetterSpacing);
+    padding: var(--navItemPadding);
+    padding-bottom: 0px;
+    position: relative;
 }
-.left .navItem {
-    justify-content: flex-start;
-}
-.right .navItem {
-    justify-content: flex-end;
-}
-.navMenu {
-    background: var(--menuBackground);
-    border: 2px solid black;
+.menu {
+    background-color: var(--menuBackgroundColor);
+    border: var(--menuBorderThickness) solid var(--navBackgroundColor);
     border-bottom: none;
-    border-radius: 7px 7px 0px 0px;
-    color: var(--navColor);
-    margin: 0px;
+    border-radius: var(--menuBorderRadius) var(--menuBorderRadius) 0px 0px;
 
-    visibility: hidden;
     position: absolute;
-    bottom: var(--navHeight);
+    transform: translateY(calc(-1 * var(--navHeight)));
+    bottom: 0px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+
+    visibility: hidden;
+}
+.left .menu {
+    left: 0px;
+}
+.right .menu {
+    right: 0px;
 }
 .menuItem {
-    border-bottom: 1.5px solid black;
+    border-bottom: calc(0.75 * var(--menuBorderThickness)) solid var(--navBackgroundColor);
+    color: var(--fontColor);
+    padding: var(--menuItemPadding);
+    text-align: left;
     white-space: nowrap;
     width: 100%;
 }
 .menuItem:last-child {
     border-bottom: none;
 }
-
-.navItem:hover > .navMenu {
+.navItem:hover > .menu {
     visibility: visible;
 }
-.navItem:hover,
-.menuItem:hover {
-    color: var(--selectionColor);
-    cursor: pointer;
-}
-
 
 /********** media querry **********/
 @media screen and (max-width: 410px) {
     .navBar {
         border: 0px solid red;
         height: 800px;
-        
+
 
         display: flex;
         flex-direction: column;

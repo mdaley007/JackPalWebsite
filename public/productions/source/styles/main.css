@@ -1,5 +1,5 @@
 /* normalize css */
-@import url(http://www.w3schools.com/lib/w3.css);
+/*@import url(http://www.w3schools.com/lib/w3.css);*/
 
 /* get fonts */
 @import url(https://fonts.googleapis.com/css?family=Special+Elite);
@@ -7,9 +7,17 @@
 
 /* global variables */
 :root {
-    --backgroundColor: white;
     --fontText: 'Special Elite', cursive;
     --fontTitle: 'Oswald', sans-serif;
-    --navHeight: 40px;
+    --navHeight: 60px;
     --selectionColor: red;
+}
+
+/*elements */
+* {
+    border: none;
+    box-sizing: border-box;
+    color: #000000;
+    margin: 0px;
+    padding: 0px;
 }

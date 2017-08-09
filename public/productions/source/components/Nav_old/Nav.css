@@ -1,0 +1,151 @@
+/* import w3 icons */
+@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/* variables */
+:root {
+    --menuBackground: #444444;
+    --navBackground: #000000;
+    --navColor: #FFFFFF;
+    --navText: #CCCCCC;
+}
+
+/* elements */
+a {
+    padding: 0px 10px;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* classes */
+.navBar {
+    background-color: var(--navBackground);
+    border: 0px solid red;
+    min-height: var(--navHeight);
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+
+    color: var(--navColor);
+    font-family: var(--fontText);
+    font-size: 1.3em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;;
+    align-items: flex-start;
+}
+.left, .right {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+.navItem {
+    border: 0px solid purple;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left .navItem {
+    justify-content: flex-start;
+}
+.right .navItem {
+    justify-content: flex-end;
+}
+.navMenu {
+    background: var(--menuBackground);
+    border: 2px solid black;
+    border-bottom: none;
+    border-radius: 7px 7px 0px 0px;
+    color: var(--navColor);
+    margin: 0px;
+
+    visibility: hidden;
+    position: absolute;
+    bottom: var(--navHeight);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.menuItem {
+    border-bottom: 1.5px solid black;
+    white-space: nowrap;
+    width: 100%;
+}
+.menuItem:last-child {
+    border-bottom: none;
+}
+
+.navItem:hover > .navMenu {
+    visibility: visible;
+}
+.navItem:hover,
+.menuItem:hover {
+    color: var(--selectionColor);
+    cursor: pointer;
+}
+
+
+/********** media querry **********/
+@media screen and (max-width: 410px) {
+    .navBar {
+        border: 0px solid red;
+        height: 800px;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .left, .right {
+        border: 0px solid yellow;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .navItem {
+        border: 0px solid blue;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .navMenu {
+        background-color: var(--menuBackground);
+        border: 0px solid red;
+        border-radius: 0px;
+        /*height: 0px;*/
+        height: auto;
+        width: 100%;
+
+        position: static;
+        /*visibility: hidden;*/
+        visibility: visible;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .menuItem {
+        height: auto;
+        text-align: center;
+    }
+    .navItem:hover > .navMenu {
+        /*height: auto;*/
+        visibility: visible;
+    }
+
+}

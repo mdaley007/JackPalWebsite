@@ -1,0 +1,43 @@
+/* global variables */
+:root {
+    --backgroundColor: cornflowerblue;
+    --gridSpacing: 20px;
+}
+
+/* elements */
+nav {
+    grid-area: nav;
+}
+
+/* classes */
+.window {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: calc(100vh - var(--navHeight)) var(--navHeight);
+    grid-template-areas:
+        "workspace"
+        "nav";
+}
+.workspace {
+    background-color: var(--backgroundColor);
+    grid-area: workspace;
+    padding: var(--gridSpacing);
+
+    display: grid;
+    grid-gap: var(--gridSpacing);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:    1fr 1fr;
+    grid-template-areas:
+        "grid1 grid2 grid3"
+        "grid4 grid5 grid6";
+}
+
+/* id's */
+#grid1 { grid-area: grid1; }
+#grid2 {
+    grid-area: grid2;
+}
+#grid3 { grid-area: grid3; }
+#grid4 { grid-area: grid4; }
+#grid5 { grid-area: grid5; }
+#grid6 { grid-area: grid6; }

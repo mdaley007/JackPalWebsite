@@ -1,25 +1,20 @@
 /* classes */
-.bodyContainer {
-    border: none;
-    height: 100vh;
-    weight: 100vw;
-
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
+.window {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: calc(100vh - var(--navHeight)) var(--navHeight);
+    grid-template-areas:
+        "workspace"
+        "nav";
 }
-
-.mainWindow {
-    background: var(--backgroundColor) url("../media/jackPalLogo-white.png") no-repeat center left;
+.workspace {
+    background-color: white;
+    background-image: url("../media/jackPalLogo-transparent.png");
+    background-position: left, center;
+    background-repeat: no-repeat;
     background-size: contain;
-    border: 5px solid green;
-    font-family: var(--fontTitle);
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    width: 100vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    grid-area: workspace;
+}
+nav {
+    grid-area: nav;
 }

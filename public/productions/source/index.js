@@ -7,13 +7,14 @@ import { BrowserHistory,
          Switch }        from 'react-router-dom'
 
 // import styles
-import './styles/main.css'
+import style from './styles/main.css'
 
 // import views
-import About     from './views/About'
-import Home      from './views/Home'
-import Layout    from './views/Layout'
-import Workshops from './views/Workshops'
+import About      from './views/About'
+import Home       from './views/Home'
+import Layout     from './views/Layout'
+import Workshops  from './views/Workshops'
+import WritersApp from './views/WriterApp'
 
 // define router
 const router = (
@@ -26,6 +27,6 @@ const router = (
 
 // render router
 ReactDOM.render(
-    <Home />,
+    <WritersApp />,
     document.getElementById('root')
 )
