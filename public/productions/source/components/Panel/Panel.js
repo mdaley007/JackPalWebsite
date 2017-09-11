@@ -1,6 +1,9 @@
 // import modules
-import   PropTypes            from 'prop-types'
-import   React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import React     from 'react'
+
+// import components
+import DocumentIcon from '../DocumentIcon'
 
 // import style
 import style from './Panel.css'
@@ -10,19 +13,18 @@ class Panel extends React.Component {
 
     render() {
         const gridLocation = this.props.gridLocation
-        const title        = this.props.title
+        const phase        = this.props.phase
+        const projectList  = this.props.projectList
+
         return (
             <div className={style.panel} id={gridLocation}>
-                <div className={style.panelName}>{title}</div>
+                <div className={style.title}>{phase.value + '. ' + phase.phase}</div>
                 <div className={style.directory}>
-                    <div className={style.project}>
-                        <div className={style.fileName}>File 01</div>
-                        <span className="fileIcon glyphicons glyphicons-file"></span>
-                    </div>
-                    <div className={style.project}>
-                        <div className={style.fileName}>File 02</div>
-                        <div className={style.fileIcon + "fa fa-file"}></div>
-                    </div>
+                    {projectList.map( (project, key) => {
+                        if (project.phase == phase) {
+                            return(<DocumentIcon key={key} filename={project.filename} />)
+                        }
+                    })}
                 </div>
             </div>
         )
@@ -31,12 +33,14 @@ class Panel extends React.Component {
 
 Panel.propTypes = {
     gridLocation: PropTypes.string,
-    title:        PropTypes.string
+    phase:        PropTypes.object,
+    projectList:  PropTypes.array,
 }
 
 Panel.defaultProps = {
-    gridLocation: "grid1",
-    title: "TITLE"
+    gridLocation: 'grid1',
+    phase: {value: 1, phase: 'Step Outline'},
+    projectList: [],
 }
 
 export default Panel

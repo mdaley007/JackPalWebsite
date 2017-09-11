@@ -64,9 +64,10 @@ ul {
     color: var(--navColor);
     margin: 0px;
 
-    visibility: hidden;
+/*    visibility: hidden;*/
     position: absolute;
     bottom: var(--navHeight);
+    z-index: 100;
 
     display: flex;
     flex-direction: column;
@@ -77,6 +78,7 @@ ul {
     border-bottom: 1.5px solid black;
     white-space: nowrap;
     width: 100%;
+    z-index: 1;
 }
 .menuItem:last-child {
     border-bottom: none;

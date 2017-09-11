@@ -1,15 +1,5 @@
-/* import bootstrap icons */
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
-
-/* get fonts */
-@import url(https://fonts.googleapis.com/css?family=Special+Elite);
-@import url(https://fonts.googleapis.com/css?family=Oswald);
-
 /* global variables */
 :root {
-    --fontText: 'Special Elite', cursive;
-    --fontTitle: 'Oswald', sans-serif;
-
     --panelBackgroundColor: ghostWhite;
     --panelBorderColor: black;
     --panelBorderThickness: 2px;
@@ -17,21 +7,16 @@
     --panelFontSize: 150%;
 }
 
-/* elements */
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-}
-
 /* classes */
 .panel {
     background-color: var(--panelBackgroundColor);
     border: var(--panelBorderThickness) solid var(--panelBorderColor);
     border-radius: var(--gridSpacing);
+    overflow: hidden;
 }
-.panelName {
+.title {
     color: var(--panelFontColor);
+    border-bottom: 1px solid black;
     font-size: var(--panelFontSize);
     font-family: var(--fontTitle);
     height: 10%;
@@ -39,9 +24,11 @@
     width: 100%;
 }
 .directory {
-    border: 1px solid black;
+    border: 0px solid black;
     height: 90%;
-    padding: 0px;
+    overflow-y: auto;
+    padding: 5px;
+    padding-top: 10px;
     width: 100%;
 
     display: flex;
@@ -49,25 +36,4 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: flex-start;
-}
-.project {
-    border: 1px solid black;
-    height: 110px;
-    padding: 10px;
-    width: 85px;
-
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: center;
-}
-.project .fileName {
-    color: var(--panelFontColor);
-    font-size: 1em;
-    font-family: var(--fontText);
-}
-.project .icon {
-    border: 1px solid red;
-    height: 100%;
-    width: 100%;
 }

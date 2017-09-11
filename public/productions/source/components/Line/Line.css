@@ -1,0 +1,90 @@
+/* global variables */
+:root {
+    --fontSize: 0.1666667in;
+    --fontLetterSpacing: 0.011in;
+
+    --space-half:       0.1in;
+    --space-single:     0.17in;
+    --space-singlePlus: 0.3in;
+    --space-double:     0.4in;
+}
+
+/* classes */
+
+.address {
+    font-style: normal;
+}
+.center {
+    padding-left: 0in;
+    padding-right: 0in;
+    text-align: center;
+}
+.character {
+    padding-left: 2in;
+    padding-right: 0in;
+    padding-bottom: 0in;
+    text-transform: uppercase;
+}
+.continued {
+    padding-left: 0in;
+    padding-right: 0in;
+    padding-bottom: var(--space-single)in;
+    text-transform: uppercase;
+}
+.description {
+    padding-left: 0in;
+    padding-right: 0in;
+    padding-bottom: var(--space-single);
+    word-wrap: break-word;
+}
+.dialog {
+    padding-left: 1.0in;
+    padding-right: 1.5in;
+    padding-bottom: var(--space-single);
+}
+.emphasis {
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.extension {
+    text-transform: uppercase;
+}
+.fadein, .subheader {
+    padding-left: 0in;
+    padding-right: 0in;
+    padding-bottom: var(--space-singlePlus);
+    text-transform: uppercase;
+}
+.parenthetical {
+    padding-left: 1.5in;
+    padding-right: 2in;
+    padding-bottom: 0in;
+}
+.screenplayTitle {
+    padding-bottom: var(--space-single);
+    text-align: center;
+    text-transform: uppercase;
+}
+.shot {
+    padding-left: 0in;
+    padding-right: 0in;
+    padding-bottom: var(--space-single);
+    text-transform: uppercase;
+}
+.slugline {
+    padding-left: 0in;
+    padding-right: 0in;
+    padding-bottom: var(--space-single);
+    text-transform: uppercase;
+    transform: translateX(-0.25in);
+}
+.transition {
+    padding-left: 4in;
+    padding-right: 0in;
+    padding-bottom: var(--space-singlePlus);
+    text-transform: uppercase;
+}
+.default {
+
+}

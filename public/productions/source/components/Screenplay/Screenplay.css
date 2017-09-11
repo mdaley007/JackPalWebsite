@@ -1,0 +1,41 @@
+/* global variables */
+:root {
+    --fontSize: 0.1666667in;
+    --fontLetterSpacing: 0.011in;
+
+    --backgroundColor: gray;
+
+    --marginLeft:   1.5in;
+    --marginRight:  1.0in;
+    --marginTop:    1.0in;
+    --marginBottom: 1.0in;
+
+    --space-half:       0.1in;
+    --space-single:     0.17in;
+    --space-singlePlus: 0.3in;
+    --space-double:     0.4in;
+}
+
+/* classes */
+.sheet {
+    background-color: #FFF;
+    color: #000;
+    font-family: var(--fontText);
+    font-size: var(--fontSize);
+    height: 11in;
+    letter-spacing: var(--fontLetterSpacing);
+    line-height: var(--space-single);
+    margin: 15px;
+    padding-left: var(--marginLeft);
+    padding-right: var(--marginRight);
+    padding-top: var(--marginTop);
+    padding-bottom: var(--marginBottom);
+
+    text-align: left;
+    width: 8.5in;
+}
+.pageNo {
+    position: absolute;
+    top: 0.5in;
+    right: var(--marginRight);
+}

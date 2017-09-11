@@ -1,0 +1,38 @@
+/* global variables */
+:root {
+
+}
+
+/* elements */
+input {
+    color: #444;
+    outline-width: 0px;
+    padding-top: 0.15in;
+}
+
+/* classes */
+.notecard {
+    background-color: white;
+    color: #444;
+    font-family: var(--fontText);
+    height: 3in;
+    margin: 0.125in;
+    width: 5in;
+}
+.cardTitle {
+    border-bottom: 2px solid pink;
+    font-size: 0.25in;
+    height: 0.4375in;
+    padding-top: 0.10in;
+    text-align: center;
+    width: 100%;
+}
+.cardText {
+    background: linear-gradient(white 90%, lightblue 10%);
+    background-size: 100% 0.25in;
+    font-size: 0.18in;
+    height: 2.5625in;
+    line-height: 0.25in;
+    overflow: hidden;
+    padding: 0.05in 0.25in;
+}

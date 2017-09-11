@@ -1,0 +1,33 @@
+/* global variables */
+:root {
+    --projectIconColor: #444;
+    --projectIconWidth: 65px;
+}
+
+/* classes */
+.documentIcon {
+    border: 0px solid blue;
+    color: var(--projectIconColor);
+    width: var(--projectIconWidth);
+
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.filename {
+    border: 0px solid magenta;
+    font-size: 1em;
+    font-family: var(--fontText);
+    overflow: hidden;
+    text-align: center;
+    width: 92%;
+}
+.icon {
+    border: 0px solid red;
+    font-size: 4em;
+    padding-left: 4px;
+    text-align: center;
+    width: 100%;
+}

@@ -1,56 +1,21 @@
-/* import w3 icons */
-@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
-
-/* get fonts */
-@import url(https://fonts.googleapis.com/css?family=Special+Elite);
-@import url(https://fonts.googleapis.com/css?family=Oswald);
-
-/* variables */
+/* global variables */
 :root {
     --fontColor: #CCCCCC;
     --fontSize: 1.5em;
-    --fontText: 'Special Elite', cursive;
-    --fontTitle: 'Oswald', sans-serif;
 
     --menuItemPadding: 7px 10px;
-    --menuBackgroundColor: #444444;
+    --menuBackgroundColor: #222222;
     --menuBorderRadius: 7px;
     --menuBorderThickness: 3px;
 
     --navBackgroundColor: #000000;
-/*    --navHeight: 50px;*/
     --navItemPadding: 10px;
     --navLetterSpacing: 1.0px;
     --navPadding: 10px;
-
-    --selectionColor: red;
 }
 
-/* elements */
-a {
-    color: var(--fontColor);
-}
-a:link {
-    color: var(--fontColor);
-    text-decoration: none;
-}
-a:visited {
-    color: var(--fontColor);
-}
-a:hover {
-    color: var(--selectionColor);
-    cursor: pointer;
-}
-a:active {
-    color: var(--fontColor);
-}
-span {
-    color: var(--fontColor);
-}
-span:hover {
-    color: var(--selectionColor);
-}
-nav {
+/* classes */
+.nav {
     background: var(--navBackgroundColor);
     border: none;
     bottom: 0px;
@@ -61,14 +26,13 @@ nav {
     padding: 0px var(--navPadding);
     position: fixed;
     width: 100%;
+    z-index: 100;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;;
     align-items: stretch;
 }
-
-/* classes */
 .left, .right {
     border: none;
 
@@ -85,11 +49,18 @@ nav {
     padding-bottom: 0px;
     position: relative;
 }
+.icon {
+    color: var(--fontColor);
+}
+.icon:hover {
+    color: var(--selectionColor);
+}
 .menu {
     background-color: var(--menuBackgroundColor);
     border: var(--menuBorderThickness) solid var(--navBackgroundColor);
     border-bottom: none;
     border-radius: var(--menuBorderRadius) var(--menuBorderRadius) 0px 0px;
+    grid-area: nav;
 
     position: absolute;
     transform: translateY(calc(-1 * var(--navHeight)));

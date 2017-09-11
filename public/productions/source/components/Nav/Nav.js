@@ -1,6 +1,6 @@
 // import modules
-import   PropTypes            from 'prop-types'
-import   React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import React     from 'react'
 
 // import style
 import style from './Nav.css'
@@ -54,10 +54,10 @@ class Nav extends React.Component {
         const right = this.props.navList.right
 
         return (
-            <nav>
+            <nav className={style.nav}>
 
                 <div className={style.left}>
-                    <div className={style.navItem}><a href="#"><span className="fa fa-home"></span></a></div>
+                    <div className={style.navItem}><a href="#"><span className={style.icon + " fa fa-home"}></span></a></div>
                     <div className={style.navItem}>
                         <a href="#">Workshops</a>
                         <div className={style.menu}>

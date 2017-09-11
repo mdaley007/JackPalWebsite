@@ -1,5 +1,5 @@
 // import modules
-import React, { Component } from 'react'
+import React from 'react'
 
 // import components
 import Nav from '../components/Nav'
@@ -11,7 +11,7 @@ import style from '../styles/Home.css'
 import navList from './navList.json'
 
 // view: Home
-class Home extends Component {
+class Home extends React.Component {
     render() {
         return (
             <div className={style.window}>

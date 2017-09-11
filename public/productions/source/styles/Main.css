@@ -1,0 +1,43 @@
+/* w3 normalize css */
+@import url(http://www.w3schools.com/lib/w3.css);
+/* font-awesome icons */
+@import url(http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+/* bootstrap glyphicons */
+@import url(http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css);
+
+/* get fonts */
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+/* global variables */
+:root {
+    --fontText: 'Special Elite', cursive;
+    --fontTitle: 'Oswald', sans-serif;
+    --navHeight: 60px;
+    --selectionColor: red;
+}
+
+/*elements */
+* {
+    border: none;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+a {
+    color: var(--fontColor);
+}
+a:link {
+    color: var(--fontColor);
+    text-decoration: none;
+}
+a:visited {
+    color: var(--fontColor);
+}
+a:hover {
+    color: var(--selectionColor);
+    cursor: pointer;
+}
+a:active {
+    color: var(--fontColor);
+}

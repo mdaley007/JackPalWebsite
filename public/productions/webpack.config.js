@@ -45,6 +45,10 @@ const common = {
                 test: /\.(jpe?g|png|gif|svg)$/i,
                 use: 'file-loader',
             },
+            {
+                test: /\.json$/,
+                use: 'json-loader',
+            },
         ],
     },
     plugins: [
