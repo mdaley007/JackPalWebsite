@@ -10,12 +10,16 @@ module.exports = function() {
     const db = Mongoose.connect(Config.db, {useMongoClient: true} )
 
     // load Models
-    require('../models/block.model')
-    require('../models/project.model')
-    require('../models/scene.model')
-    require('../models/screenplay.model')
-    require('../models/slugline.model')
     require('../models/user.model')
+
+    require('../models/project.model')
+    require('../models/screenplay.model')
+    require('../models/sequence.model')
+    require('../models/scene.model')
+    require('../models/slugline.model')
+    require('../models/block.model')
+
+    console.log('Connected to ' + Config.db)
 
     return db
 }

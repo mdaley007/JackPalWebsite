@@ -7,12 +7,8 @@ const Schema = Mongoose.Schema
 // define schema
 const SceneSchema = new Schema({
     name: String,
-    notecardText: String,
-    treatmentText: String,
-
-    slugline: Object,
-    blocks: Array,
+    scenes: Array,
 })
 
 // create model from schema
-Mongoose.model('Scene', SceneSchema)
+Mongoose.model('Sequence', SceneSchema)

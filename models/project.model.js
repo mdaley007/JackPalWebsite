@@ -6,10 +6,12 @@ const Schema = Mongoose.Schema
 
 // define schema
 const ProjectSchema = new Schema({
-    owner: Array,
-    title: String,
+    owner: String,
+    projectName: String,
     filename: String,
+    
     screenplay: Object,
+    campaign: Object,
 })
 
 // create model from schema

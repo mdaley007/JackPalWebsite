@@ -6,12 +6,10 @@ const Schema = Mongoose.Schema
 
 // define schema
 const ScreenplaySchema = new Schema({
-    acts: Array,
-    premise: String,
-    scenes: Array,
-    sequences: Array,
-    synopsis: String,
     title: String,
+    synopsisText: String,
+    sequences: Array,
+    research: Array,
 })
 
 // create model from schema
